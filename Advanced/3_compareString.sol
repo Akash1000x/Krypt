@@ -8,5 +8,8 @@ contract Compare {
     ) public pure returns (bool) {
         return
             keccak256(abi.encodePacked(s1)) == keccak256(abi.encodePacked(s2));
+
+        // for cocatenation of two string
+        // return string.concat(s1, s2);
     }
 }

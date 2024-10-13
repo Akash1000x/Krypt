@@ -7,7 +7,7 @@ contract DataTypes {
     uint256 public num3 = 256;
 
     //explicit typecasting to uint8 but it will not change the value because num3 is not in the range of uint8 so it will set to 0 and
-    //this cost gas and also this loos billions of dolars
+    //this costs gas and also this loos billions of dolars
     uint8 public num8 = uint8(num3);
 
     bool public num4 = false; //default is false
