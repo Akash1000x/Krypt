@@ -10,7 +10,11 @@ contract Structs {
 
     Student public s;
 
+    //Fixed size array of struct
     Student[5] public s1;
+
+    //Dynamic size array of struct
+    Student[] public s2;
 
     function setter(
         uint _index,
@@ -27,6 +31,14 @@ contract Structs {
         s.name = _name;
         s.rollNo = _rollNo;
         s.pass = _pass;
+    }
+
+    function setterDynamicArray(
+        string memory _name,
+        uint _rollNo,
+        bool _pass
+    ) public {
+        s2.push(Student(_name, _rollNo, _pass));
     }
 
     function getter() public view returns (Student[5] memory) {
